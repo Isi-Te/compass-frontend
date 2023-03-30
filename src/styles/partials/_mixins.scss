@@ -1,0 +1,15 @@
+@use './variables' as *;
+
+//Layout Grid
+@mixin mobile-layout {
+    margin: 0 1rem;
+}
+
+//Padding
+@mixin mobile-header-padding {
+    padding: 1.5rem 1rem 1rem 1rem;
+}
+
+@mixin mobile-padding {
+    padding: 1rem;
+}
