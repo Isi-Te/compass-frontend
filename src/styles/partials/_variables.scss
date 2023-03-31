@@ -1,49 +1,10 @@
-@use './mixins' as *;
-@use './variables' as *;
-@use './fonts' as *;
+//Responsive Design
+$tablet-breakpoint: 48rem; // 768px
+$desktop-breakpoint: 80rem; // 1280px
 
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    color: $secondary-dark-grey;
-}
-
-h1 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 500;
-    font-style: normal;
-}
-
-h2 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-    font-weight: 600;
-    font-style: normal;
-    color: $primary-white;
-}
-
-h3 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 300;
-    font-style: normal;
-}
-
-a {
-    text-decoration: none;
-    color: $primary-white;
-}
-
-p {
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
-    margin: 0;
-    color: $primary-white;
-}
+//Colors
+$primary-cyan: #006969;
+$primary-turquoise: #6FBBB1;
+$primary-white: #FFFFFF;
+$secondary-dark-grey: #26262C;
+$secondary-light-grey: #D1D0D0;

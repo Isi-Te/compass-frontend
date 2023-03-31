@@ -1,8 +1,6 @@
-@use './variables' as *;
-
 //Layout Grid
 @mixin mobile-layout {
-    margin: 0 1rem;
+    margin: 1rem;
 }
 
 //Padding

@@ -1,3 +1,26 @@
 @use '../../styles/partials/global' as *;
-@use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.nav {
+    background-color: $primary-cyan;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 3rem;
+
+    &__icon-compass {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    &__icon-track {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    &__icon-profile {
+        width: 2rem;
+        height: 2rem;
+    }
+}
