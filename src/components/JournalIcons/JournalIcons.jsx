@@ -18,24 +18,61 @@ const JournalIcons = () => {
         <section className='journal'>
             <h1 className='journal__title'>Daily Journaling</h1>
             <div className='journal__emotional-health'>
-                <img className='journal__icon journal__icon-happy' src={happyIcon} alt='happy face icon'></img>
-                <img className='journal__icon journal__icon-sad' src={sadIcon} alt='sad face icon'></img>
-                <img className='journal__icon journal__icon-laugh' src={laughIcon} alt='laughing face icon'></img>
-                <img className='journal__icon journal__icon-angry' src={angryIcon} alt='angry face icon'></img>
+                <div className='journal__emo-container'>
+                    <img className='journal__icon journal__icon-happy' src={happyIcon} alt='happy face icon'></img>
+                    <h4 className='journal__icon-title'>Happy</h4>
+                </div>
+                <div className='journal__emo-container'>
+                    <img className='journal__icon journal__icon-sad' src={sadIcon} alt='sad face icon'></img>
+                    <h4 className='journal__icon-title'>Sad</h4>
+                </div>
+                <div className='journal__emo-container'>
+                    <img className='journal__icon journal__icon-laugh' src={laughIcon} alt='laughing face icon'></img>
+                    <h4 className='journal__icon-title'>Laughs</h4>
+                </div>
+                <div className='journal__emo-container'>
+                    <img className='journal__icon journal__icon-angry' src={angryIcon} alt='angry face icon'></img>
+                    <h4 className='journal__icon-title'>Frustrated</h4>
+                </div>
             </div>
+
             <div className='journal__physical-health'>
-                <img className='journal__icon journal__icon-stress' src={stressIcon} alt='thunder icon'></img>
-                <img className='journal__icon journal__icon-sleep' src={sleepIcon} alt='half moon icon'></img>
-                <img className='journal__icon journal__icon-nutrition' src={nutritionIcon} alt='apple icon'></img>
-                <img className='journal__icon journal__icon-energy' src={energyIcon} alt='battery icon'></img>
+                <div className='journal__physics-container'>
+                    <img className='journal__icon journal__icon-stress' src={stressIcon} alt='thunder icon'></img>
+                    <h4 className='journal__icon-title'>Stress</h4>
+                </div>
+                <div className='journal__physics-container'>
+                    <img className='journal__icon journal__icon-sleep' src={sleepIcon} alt='half moon icon'></img>
+                    <h4 className='journal__icon-title'>Sleep</h4>
+                </div>
+                <div className='journal__physics-container'>
+                    <img className='journal__icon journal__icon-nutrition' src={nutritionIcon} alt='apple icon'></img>
+                    <h4 className='journal__icon-title'>Nutrition</h4>
+                </div>
+                <div className='journal__physics-container'>
+                    <img className='journal__icon journal__icon-energy' src={energyIcon} alt='battery icon'></img>
+                    <h4 className='journal__icon-title'>Energy</h4>
+                </div>
             </div>
             <div className='journal__activity'>
-                <img className='journal__icon journal__icon-nature' src={natureIcon} alt='trees icon'></img>
-                <img className='journal__icon journal__icon-fitness' src={fitnessIcon} alt='dumbell icon'></img>
-                <img className='journal__icon journal__icon-social' src={socialIcon} alt='people icon'></img>
-                <img className='journal__icon journal__icon-self-care' src={selfCareIcon} alt='yoga pose icon'></img>
-            </div>
-        </section>
+                <div className='journal__activity-container'>
+                    <img className='journal__icon journal__icon-nature' src={natureIcon} alt='trees icon'></img>
+                    <h4 className='journal__icon-title'>Nature</h4>
+                </div>
+                <div className='journal__activity-container'>
+                    <img className='journal__icon journal__icon-fitness' src={fitnessIcon} alt='dumbell icon'></img>
+                    <h4 className='journal__icon-title'>Fitness</h4>
+                </div>
+                <div className='journal__activity-container'>
+                    <img className='journal__icon journal__icon-social' src={socialIcon} alt='people icon'></img>
+                    <h4 className='journal__icon-title'>Social</h4>
+                </div>
+                <div className='journal__activity-container'>
+                    <img className='journal__icon journal__icon-self-care' src={selfCareIcon} alt='yoga pose icon'></img>
+                    <h4 className='journal__icon-title'>Self-care</h4>
+                </div >
+            </div >
+        </section >
     );
 };
 
