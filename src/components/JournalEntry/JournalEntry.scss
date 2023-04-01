@@ -6,15 +6,20 @@
     @include mobile-layout;
 
     &__input {
-        height: 2.5rem;
+        height: 2.75rem;
         width: 100%;
         margin: 0.25rem 0;
         border-radius: 0.625rem;
         text-align: end;
         font-family: "Quicksand", sans-serif;
         font-size: 0.75rem;
+        color: $secondary-light-grey;
         padding-right: 0.5rem;
         border: 0.1rem solid $secondary-light-grey;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+
 
         &--highlight {
             background-image: url(../../assets/icons/highlight-icon.svg);
@@ -29,5 +34,10 @@
             background-position: left;
             background-size: 1.75rem;
         }
+    }
+
+    &__input:focus {
+        border: 0.1rem solid $primary-cyan;
+        color: $primary-cyan;
     }
 }

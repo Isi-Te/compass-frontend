@@ -3,17 +3,21 @@
 @use '../../styles/partials/mixins' as *;
 
 .button {
+    @include mobile-layout;
     display: flex;
     justify-content: space-around;
-    margin: 1.5rem 0;
+    margin-bottom: 5.5rem;
+
 
     &__cancel {
         color: $primary-cyan;
         background-color: $primary-white;
         text-transform: uppercase;
         border: none;
-        width: 40%;
-        font-weight: bold;
+        width: 50%;
+        font-weight: 600;
+        height: 2.5rem;
+        cursor: pointer;
     }
 
     &__track {
@@ -21,9 +25,9 @@
         background-color: $primary-cyan;
         text-transform: uppercase;
         border: none;
-        width: 40%;
-        height: 2rem;
+        width: 50%;
+        height: 2.5rem;
         border-radius: 0.625rem;
-        font-weight: bold;
+        cursor: pointer;
     }
 }

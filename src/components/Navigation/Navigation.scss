@@ -6,21 +6,18 @@
     background-color: $primary-cyan;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    height: 3rem;
+    justify-content: space-between;
+    height: 4rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0 2rem;
 
-    &__icon-compass {
-        width: 2rem;
-        height: 2rem;
-    }
 
-    &__icon-track {
-        width: 2rem;
-        height: 2rem;
-    }
-
+    &__icon-compass,
+    &__icon-track,
     &__icon-profile {
-        width: 2rem;
-        height: 2rem;
+        width: 2.5rem;
+        height: 2.5rem;
     }
 }
