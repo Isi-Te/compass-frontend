@@ -8,11 +8,15 @@
     background-color: $secondary-light-grey;
     margin-bottom: 3rem;
     border-radius: 0.625rem 0.625rem 0 0;
+    position: fixed;
+    bottom: 1rem;
+    left: 0;
+    transition: bottom 0.5s ease-out;
+    z-index: 10;
 
     &__container {
         position: relative;
     }
-
 
     &__minimize {
         position: absolute;
@@ -44,7 +48,6 @@
         height: 1.5rem;
         font-size: 1rem;
         font-weight: 500;
-
     }
 
     &__slider-container {

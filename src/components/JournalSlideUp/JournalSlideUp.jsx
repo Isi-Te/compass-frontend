@@ -3,7 +3,7 @@ import './JournalSlideUp.scss';
 import infoIcon from '../../assets/icons/info-white-icon.svg';
 import minimizeIcon from '../../assets/icons/minimize-icon.svg';
 
-const JournalSlideUp = () => {
+const JournalSlideUp = ({ open, onClose }) => {
 
     const [value, onChange] = useState(1);
     useEffect(() => {
@@ -12,6 +12,8 @@ const JournalSlideUp = () => {
             element.style.left = `${Number(value / 4)}px`;
         }
     })
+
+    if (!open) return null;
 
     return (
         <section className='slide-up'>
@@ -31,7 +33,7 @@ const JournalSlideUp = () => {
                     {value}
                 </div>
             </div>
-            <button className='slide-up__button'>track</button>
+            <button className='slide-up__button' onClick={onClose}>track</button>
         </section>
     );
 };

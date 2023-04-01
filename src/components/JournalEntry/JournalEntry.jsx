@@ -18,6 +18,7 @@ const JournalEntry = () => {
                 <div className='journal-entry__button'>
                     <Button className='journal-entry__button-cancel' name='button__cancel' type='cancel' />
                     <Button className='journal-entry__button-track' name='button__track' type='track' />
+
                 </div>
             </form>
         </section>
