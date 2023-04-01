@@ -3,9 +3,10 @@ import './Button.scss';
 
 const Button = () => {
     return (
-        <div>
-
-        </div>
+        <section className='button'>
+            <button className='button__cancel'>cancel</button>
+            <button className='button__track'>track</button>
+        </section>
     );
 };
 
