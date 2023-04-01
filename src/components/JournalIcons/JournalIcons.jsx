@@ -57,7 +57,7 @@ const JournalIcons = () => {
             <div className='journal__activity'>
                 <div className='journal__activity-container'>
                     <img className='journal__icon journal__icon-nature' src={natureIcon} alt='trees icon'></img>
-                    <h4 className='journal__icon-title'>Nature</h4>
+                    <h4 className='journal__icon-title'>Outdoors</h4>
                 </div>
                 <div className='journal__activity-container'>
                     <img className='journal__icon journal__icon-fitness' src={fitnessIcon} alt='dumbell icon'></img>

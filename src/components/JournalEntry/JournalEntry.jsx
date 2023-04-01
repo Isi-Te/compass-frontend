@@ -1,5 +1,6 @@
 import React from 'react';
 import './JournalEntry.scss';
+import Button from '../Button/Button';
 
 const JournalEntry = () => {
     return (
@@ -13,6 +14,10 @@ const JournalEntry = () => {
             <form className='journal-entry__form'>
                 <div className='journal-entry__stress'>
                     <input className='journal-entry__input journal-entry__input--lowlight' placeholder='What bothered you today?'></input>
+                </div>
+                <div className='journal-entry__button'>
+                    <Button className='journal-entry__button-cancel' name='button__cancel' type='cancel' />
+                    <Button className='journal-entry__button-track' name='button__track' type='track' />
                 </div>
             </form>
         </section>

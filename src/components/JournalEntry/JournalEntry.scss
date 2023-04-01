@@ -40,4 +40,11 @@
         border: 0.1rem solid $primary-cyan;
         color: $primary-cyan;
     }
+
+    &__button {
+        @include mobile-layout;
+        display: flex;
+        justify-content: flex-end;
+        margin: 1.5rem 0 5.5rem 0;
+    }
 }

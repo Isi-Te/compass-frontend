@@ -3,7 +3,7 @@ import Navigation from '../components/Navigation/Navigation';
 import JournalIcons from '../components/JournalIcons/JournalIcons';
 import Calendar from '../components/Calendar/Calendar';
 import JournalEntry from '../components/JournalEntry/JournalEntry';
-import Button from '../components/Button/Button';
+import JournalSlideUp from '../components/JournalSlideUp/JournalSlideUp';
 
 const JournalingPage = () => {
     return (
@@ -11,7 +11,7 @@ const JournalingPage = () => {
             <Calendar />
             <JournalIcons />
             <JournalEntry />
-            <Button />
+            <JournalSlideUp />
             <Navigation />
         </section>
     );
