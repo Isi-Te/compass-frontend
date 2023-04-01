@@ -3,9 +3,19 @@ import './JournalEntry.scss';
 
 const JournalEntry = () => {
     return (
-        <div>
+        <section className='journal-entry'>
+            <form className='journal-entry__form'>
+                <div className='journal-entry__highlight'>
 
-        </div>
+                    <input className='journal-entry__input journal-entry__input--highlight' placeholder='What made your day?'></input>
+                </div>
+            </form>
+            <form className='journal-entry__form'>
+                <div className='journal-entry__stress'>
+                    <input className='journal-entry__input journal-entry__input--lowlight' placeholder='What bothered you today?'></input>
+                </div>
+            </form>
+        </section>
     );
 };
 

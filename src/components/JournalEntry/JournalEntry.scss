@@ -1,0 +1,33 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.journal-entry {
+    @include mobile-layout;
+
+    &__input {
+        height: 2.5rem;
+        width: 100%;
+        margin: 0.25rem 0;
+        border-radius: 0.625rem;
+        text-align: end;
+        font-family: "Quicksand", sans-serif;
+        font-size: 0.75rem;
+        padding-right: 0.5rem;
+        border: 0.1rem solid $secondary-light-grey;
+
+        &--highlight {
+            background-image: url(../../assets/icons/highlight-icon.svg);
+            background-repeat: no-repeat;
+            background-position: left;
+            background-size: 1.75rem;
+        }
+
+        &--lowlight {
+            background-image: url(../../assets/icons/lowlight-icon.svg);
+            background-repeat: no-repeat;
+            background-position: left;
+            background-size: 1.75rem;
+        }
+    }
+}
