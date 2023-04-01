@@ -17,6 +17,12 @@
         background-color: $secondary-light-grey;
     }
 
+    &__avatar {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+    }
+
     &__title {
         margin: 0.5rem;
     }

@@ -1,8 +1,8 @@
 import React from 'react';
 import './Navigation.scss';
-import compassIcon from '../../assets/icons/compass-icon.svg';
-import plusIcon from '../../assets/icons/add-icon.svg';
-import profileIcon from '../../assets/icons/profile-icon.svg';
+import compassIcon from '../../assets/icons/compass-white-icon.svg';
+import plusIcon from '../../assets/icons/add-white-icon.svg';
+import profileIcon from '../../assets/icons/profile-white-icon.svg';
 
 
 const Navigation = () => {

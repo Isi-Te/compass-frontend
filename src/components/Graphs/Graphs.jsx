@@ -8,10 +8,10 @@ const Graphs = () => {
                 <h3 className='graphs__title'>Energy levels</h3>
                 <div className='graphs__graph'></div>
             </div>
-            {/* <div className='graphs__container'>
+            <div className='graphs__container'>
                 <h3 className='graphs__title'>Stress</h3>
                 <div className='graphs__graph'></div>
-            </div> */}
+            </div>
         </sections>
     );
 };
