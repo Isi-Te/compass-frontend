@@ -1,0 +1,49 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.calendar {
+    @include mobile-layout;
+    color: $secondary-light-grey;
+    border-bottom: solid 0.1rem $secondary-light-grey;
+
+    &__title {
+        display: flex;
+    }
+
+    &__month {
+        margin: 0;
+        // color: $secondary-dark-grey;
+    }
+
+    &__expand-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    &__container {
+        padding: 0 1rem;
+    }
+
+    &__week-date {
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+
+    &__week-day {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+
+    &__weekday {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+
+    &__date {
+        font-weight: bold;
+    }
+}
