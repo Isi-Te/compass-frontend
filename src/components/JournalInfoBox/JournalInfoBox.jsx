@@ -3,8 +3,17 @@ import './JournalInfoBox.scss';
 import infoIcon from '../../assets/icons/info-white-icon.svg';
 import closeIcon from '../../assets/icons/close-white-icon.svg';
 
-const JournalInfoBox = ({ infoClick, infoClose }) => {
+
+const JournalInfoBox = ({ infoClick, infoClose, infoBox, isSelected }) => {
+
     if (!infoClick) return null;
+
+    const selectedTitle = infoBox.filter((category) => {
+        return category.title === isSelected;
+    })
+
+    console.log(selectedTitle);
+
     return (
         <section className='info-box'>
             <div className='info-box__headline-container'>

@@ -4,7 +4,7 @@ import infoIcon from '../../assets/icons/info-white-icon.svg';
 import closeIcon from '../../assets/icons/close-white-icon.svg';
 import JournalInfoBox from '../JournalInfoBox/JournalInfoBox';
 
-const JournalSlideUp = ({ open, onClose }) => {
+const JournalSlideUp = ({ open, onClose, infoBox, isSelected }) => {
     const [infoClick, setInfoClick] = useState(false);
     const [value, onChange] = useState(1);
     useEffect(() => {
@@ -13,14 +13,19 @@ const JournalSlideUp = ({ open, onClose }) => {
             element.style.left = `${Number(value / 4)}px`;
         }
     })
-
     if (!open) return null;
+
+    console.log(isSelected);
+    console.log(infoBox);
+
+
+
 
     return (
         <section className='slide-up'>
             <div className='slide-up__headline-container'>
                 <div className='slide-up__headline'>
-                    <h2 className='slide-up__title'>Stress</h2>
+                    <h2 className='slide-up__title'>{isSelected}</h2>
                     <img className='slide-up__icon-info' src={infoIcon} alt='Info icon' onClick={() => setInfoClick(true)}></img>
                 </div>
                 <img className='slide-up__icon-close' src={closeIcon} alt='Close Icon' onClick={onClose}></img>
@@ -36,7 +41,7 @@ const JournalSlideUp = ({ open, onClose }) => {
             </div>
             <button className='slide-up__button' onClick={onClose}>track</button>
 
-            <JournalInfoBox infoClick={infoClick} infoClose={() => setInfoClick(false)} />
+            <JournalInfoBox infoClick={infoClick} infoClose={() => setInfoClick(false)} infoBox={infoBox} isSelected={isSelected} />
         </section>
     );
 };
