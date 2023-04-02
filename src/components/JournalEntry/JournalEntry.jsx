@@ -1,6 +1,7 @@
 import React from 'react';
 import './JournalEntry.scss';
 import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
 
 const JournalEntry = () => {
     return (
@@ -16,12 +17,12 @@ const JournalEntry = () => {
                     <input className='journal-entry__input journal-entry__input--lowlight' placeholder='What bothered you today?'></input>
                 </div>
                 <div className='journal-entry__button'>
-                    <Button className='journal-entry__button-cancel' name='button__cancel' type='cancel' />
+                    <Link to='/'><Button className='journal-entry__button-cancel' name='button__cancel' type='cancel' /></Link>
                     <Button className='journal-entry__button-track' name='button__track' type='track' />
 
                 </div>
             </form>
-        </section>
+        </section >
     );
 };
 
