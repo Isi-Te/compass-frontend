@@ -75,7 +75,7 @@ const JournalIcons = () => {
                     <h4 className='journal__icon-title'>Self-care</h4>
                 </div >
             </div >
-            <JournalSlideUp open={isOpen} onClose={() => setIsOpen(false)}></JournalSlideUp>
+            <JournalSlideUp open={isOpen} onClose={() => setIsOpen(false)} />
         </section >
     );
 };

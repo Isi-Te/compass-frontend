@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './JournalSlideUp.scss';
 import infoIcon from '../../assets/icons/info-white-icon.svg';
-import minimizeIcon from '../../assets/icons/minimize-icon.svg';
+import closeIcon from '../../assets/icons/close-white-icon.svg';
+import JournalInfoBox from '../JournalInfoBox/JournalInfoBox';
 
 const JournalSlideUp = ({ open, onClose }) => {
+    const [infoClick, setInfoClick] = useState(false);
     const [value, onChange] = useState(1);
     useEffect(() => {
         const element = document.querySelector('.value');
@@ -16,12 +18,12 @@ const JournalSlideUp = ({ open, onClose }) => {
 
     return (
         <section className='slide-up'>
-            <div className='slide-up__container'>
-                <img className='slide-up__minimize' src={minimizeIcon} alt='Minimize icon'></img>
-            </div>
-            <div className='slide-up__headline'>
-                <h2 className='slide-up__title'>Stress</h2>
-                <img className='slide-up__icon-info' src={infoIcon} alt='Info icon'></img>
+            <div className='slide-up__headline-container'>
+                <div className='slide-up__headline'>
+                    <h2 className='slide-up__title'>Stress</h2>
+                    <img className='slide-up__icon-info' src={infoIcon} alt='Info icon' onClick={() => setInfoClick(true)}></img>
+                </div>
+                <img className='slide-up__icon-close' src={closeIcon} alt='Close Icon' onClick={onClose}></img>
             </div>
             <div className='slide-up__slider-container'>
                 <input type='range' min='1' max='10' value={value} className='slider' onChange={({ target: { value: radius } }) => {
@@ -34,7 +36,7 @@ const JournalSlideUp = ({ open, onClose }) => {
             </div>
             <button className='slide-up__button' onClick={onClose}>track</button>
 
-
+            <JournalInfoBox infoClick={infoClick} infoClose={() => setInfoClick(false)} />
         </section>
     );
 };
