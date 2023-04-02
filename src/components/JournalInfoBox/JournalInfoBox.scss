@@ -1,0 +1,40 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.info-box {
+    background-color: $primary-cyan;
+    opacity: 0.8;
+    z-index: 1000;
+    margin: 0 0.5rem;
+    padding: 0.5rem 0.75rem 1.5rem 0.75rem;
+    position: fixed;
+    bottom: 5rem;
+
+    &__headline-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__headline {
+        display: flex;
+        padding: 0 0.5rem;
+    }
+
+    &__title {
+        margin-left: 0.75rem;
+    }
+
+    &__icon-close {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
+    &__details {
+        padding: 0 0.5rem;
+    }
+
+    &__question {
+        padding-bottom: 1rem;
+    }
+}

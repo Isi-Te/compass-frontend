@@ -4,7 +4,6 @@ import infoIcon from '../../assets/icons/info-white-icon.svg';
 import minimizeIcon from '../../assets/icons/minimize-icon.svg';
 
 const JournalSlideUp = ({ open, onClose }) => {
-
     const [value, onChange] = useState(1);
     useEffect(() => {
         const element = document.querySelector('.value');
@@ -34,6 +33,8 @@ const JournalSlideUp = ({ open, onClose }) => {
                 </div>
             </div>
             <button className='slide-up__button' onClick={onClose}>track</button>
+
+
         </section>
     );
 };
