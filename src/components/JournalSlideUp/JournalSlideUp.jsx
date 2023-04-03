@@ -19,8 +19,6 @@ const JournalSlideUp = ({ open, onClose, infoBox, isSelected }) => {
     console.log(infoBox);
 
 
-
-
     return (
         <section className='slide-up'>
             <div className='slide-up__headline-container'>

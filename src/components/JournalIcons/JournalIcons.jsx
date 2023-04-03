@@ -35,7 +35,6 @@ const JournalIcons = () => {
         setIsSelected(event.target.title);
     }
 
-
     const category = ['happy', 'sad', 'laughs', 'frustrated', 'stress', 'sleep', 'nutrition', 'energy', 'outdoors', 'fitness', 'social', 'self-care']
 
     return (

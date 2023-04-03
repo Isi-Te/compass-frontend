@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Graphs.scss';
+import Line from '../LineChart/LineChart';
+import axios from 'axios';
+import LineChart from '../LineChart/LineChart';
+
 
 const Graphs = () => {
+    const [graphData, setGraphData] = useState();
+
+    useEffect(() => {
+        axios
+            .get(`http://localhost:8080/`)
+            .then((res) => {
+                setGraphData(res.data);
+            })
+            .catch(error => console.error(error));
+    }, []);
+
     return (
-        <sections className='graphs'>
-            <div className='graphs__container'>
-                <h3 className='graphs__title'>Energy levels</h3>
-                <div className='graphs__graph'></div>
-            </div>
-            <div className='graphs__container'>
-                <h3 className='graphs__title'>Stress</h3>
-                <div className='graphs__graph'></div>
-            </div>
-        </sections>
+        <>
+            <LineChart graphData={graphData} />
+        </>
     );
 };
 
