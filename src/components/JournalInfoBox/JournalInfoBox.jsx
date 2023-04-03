@@ -8,26 +8,28 @@ const JournalInfoBox = ({ infoClick, infoClose, infoBox, isSelected }) => {
 
     if (!infoClick) return null;
 
-    const selectedTitle = infoBox.filter((category) => {
+    const selectedTitle = infoBox.find((category) => {
         return category.title === isSelected;
     })
 
     console.log(selectedTitle);
+
+
 
     return (
         <section className='info-box'>
             <div className='info-box__headline-container'>
                 <div className='info-box__headline'>
                     <img className='info-box__icon-info' src={infoIcon} alt='Info icon'></img>
-                    <h2 className='info-box__title'>Stress</h2>
+                    <h2 className='info-box__title'>{selectedTitle.title}</h2>
                 </div>
                 <div className='info-box__container'>
                     <img className='info-box__icon-close' src={closeIcon} alt='Close icon' onClick={infoClose}></img>
                 </div>
             </div>
             <div className='info-box__details'>
-                <p className='info-box__question'>How stressed do you feel today?</p>
-                <p className='info-box__measurement'>0 meaning not stressed at all. 10 meaning extremely stressed and overwhelmed.</p>
+                <p className='info-box__question'>{selectedTitle.question}</p>
+                <p className='info-box__measurement'>{selectedTitle.explanation}</p>
             </div>
         </section>
     );
