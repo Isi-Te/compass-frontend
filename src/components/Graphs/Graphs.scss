@@ -2,7 +2,9 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.graphs {
+.graph {
+    @include mobile-layout;
+    width: 300px;
 
     &__container {
         border: solid 1px $secondary-light-grey;
