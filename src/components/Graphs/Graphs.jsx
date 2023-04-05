@@ -21,14 +21,6 @@ const Graphs = () => {
         return <div>Loading....</div>
     }
 
-    // const [newGraphData] = graphData;
-    // const objectArray = Object.entries(newGraphData);
-    // console.log(objectArray);
-    // objectArray.forEach(([key, value]) => {
-    //     console.log(key);
-    //     console.log(value);
-    // })
-
     console.log(graphData);
 
     let happy = [];

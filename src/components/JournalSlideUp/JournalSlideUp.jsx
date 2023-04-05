@@ -3,6 +3,7 @@ import './JournalSlideUp.scss';
 import infoIcon from '../../assets/icons/info-white-icon.svg';
 import closeIcon from '../../assets/icons/close-white-icon.svg';
 import JournalInfoBox from '../JournalInfoBox/JournalInfoBox';
+import axios from 'axios';
 
 const JournalSlideUp = ({ open, onClose, infoBox, isSelected }) => {
     const [infoClick, setInfoClick] = useState(false);
@@ -13,11 +14,54 @@ const JournalSlideUp = ({ open, onClose, infoBox, isSelected }) => {
             element.style.left = `${Number(value / 4)}px`;
         }
     })
+
+
+    // const [addIcon, setAddIcon] = useState([]);
+    // const fetchIcon = () => {
+    //     axios
+    //         .get(`http://localhost:8080/icons`)
+    //         .then(res => {
+    //             console.log(res.data)
+    //             setAddIcon(res.data);
+    //         })
+    //         .catch(err => console.log(err));
+    // }
+
+    // useEffect(() => {
+    //     fetchIcon();
+    // }, [])
+
+    // function handleiconsubmit(event) {
+    //     event.preventDefault();
+
+    //     console.log(event);
+    //     console.log(event);
+    //     console.log(event.target);
+
+    //     const highlight = event.target.highlight.value;
+    //     const lowlight = event.target.lowlight.value;
+    //     const user_id = 1;
+    //     const icon_id = 21;
+
+    //     axios
+    //         .post(`http://localhost:8080/journal-entry`, {
+    //             highlight: highlight,
+    //             lowlight: lowlight,
+    //             user_id: user_id,
+    //             icon_id: icon_id
+    //         })
+    //         .then(() => {
+    //             fetchIcon();
+    //             event.target.reset();
+    //         })
+    //         .catch(err => console.log(err));
+    // }
+
+    // if (!addIcon) {
+    //     return <div>Loading....</div>
+    // }
+
     if (!open) return null;
-
-    console.log(isSelected);
-    console.log(infoBox);
-
 
     return (
         <section className='slide-up'>
@@ -37,7 +81,7 @@ const JournalSlideUp = ({ open, onClose, infoBox, isSelected }) => {
                     {value}
                 </div>
             </div>
-            <button className='slide-up__button' onClick={onClose}>track</button>
+            <button className='slide-up__button' onClick={onClose} type='submit'>track</button>
 
             <JournalInfoBox infoClick={infoClick} infoClose={() => setInfoClick(false)} infoBox={infoBox} isSelected={isSelected} />
         </section>
