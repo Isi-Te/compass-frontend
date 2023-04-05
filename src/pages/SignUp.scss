@@ -1,0 +1,34 @@
+@use '../styles/partials/global' as *;
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
+
+.signup {
+    @include mobile-layout;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        color: $primary-cyan;
+        margin-top: 0.5rem;
+    }
+
+    &__input {
+        border-radius: 0.25rem;
+        border: 0.1rem solid $primary-cyan;
+        height: 2rem;
+    }
+
+    &__button {
+        color: $primary-white;
+        background-color: $primary-cyan;
+        text-transform: uppercase;
+        border: none;
+        height: 2.5rem;
+        border-radius: 0.625rem;
+        cursor: pointer;
+        margin: 0.5rem;
+    }
+}
