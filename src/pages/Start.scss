@@ -6,6 +6,8 @@
 .start {
     &__logo {
         @include mobile-layout;
+        width: 100%;
+        margin: 0 auto;
     }
 
     &__container {
@@ -13,9 +15,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
+        padding-bottom: 10rem;
         width: 100%;
-        height: 50vh;
+        height: 55vh;
         position: fixed;
         bottom: 0;
     }
