@@ -39,7 +39,7 @@ const Login = ({ setIsUserLoggedIn }) => {
 
     return (
         <section className='login'>
-            <img className='login__logo' src={logoImg} alt='Compass logo'></img>
+            <Link to='/'><img className='login__logo' src={logoImg} alt='Compass logo'></img></Link>
             <form className='login__form' onSubmit={handleLogin}>
                 <label className='login__label' name='username'>User Name:</label>
                 <input className='login__input' name='username'></input>

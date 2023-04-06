@@ -26,15 +26,14 @@ const JournalEntry = () => {
 
         const highlight = event.target.highlight.value;
         const lowlight = event.target.lowlight.value;
-        // const user_id = 1;
-        // const icon_id = 21;
+        const user_id = 1;
+
 
         axios
             .post(`http://localhost:8080/journal-entry`, {
                 highlight: highlight,
                 lowlight: lowlight,
-                // user_id: user_id,
-                // icon_id: icon_id
+                user_id: user_id,
             })
             .then(() => {
                 fetchEntry();
