@@ -4,7 +4,6 @@
 
 .graph {
     @include mobile-layout;
-    width: 300px;
 
     &__container {
         border: solid 1px $secondary-light-grey;

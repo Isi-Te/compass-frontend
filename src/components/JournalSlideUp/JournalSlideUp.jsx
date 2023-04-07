@@ -15,51 +15,52 @@ const JournalSlideUp = ({ open, onClose, infoBox, isSelected }) => {
         }
     })
 
+    const [addIcon, setAddIcon] = useState([]);
+    const fetchIcon = () => {
+        axios
+            .get(`http://localhost:8080/icons`)
+            .then(res => {
+                console.log(res.data)
+                setAddIcon(res.data);
+            })
+            .catch(err => console.log(err));
+    }
 
-    // const [addIcon, setAddIcon] = useState([]);
-    // const fetchIcon = () => {
-    //     axios
-    //         .get(`http://localhost:8080/icons`)
-    //         .then(res => {
-    //             console.log(res.data)
-    //             setAddIcon(res.data);
-    //         })
-    //         .catch(err => console.log(err));
-    // }
+    useEffect(() => {
+        fetchIcon();
+    }, [])
 
-    // useEffect(() => {
-    //     fetchIcon();
-    // }, [])
+    function handleIconSubmit(event) {
+        event.preventDefault();
 
-    // function handleiconsubmit(event) {
-    //     event.preventDefault();
+        console.log(event);
+        console.log(event);
+        console.log(event.target);
 
-    //     console.log(event);
-    //     console.log(event);
-    //     console.log(event.target);
+        const score = event.target.score.value;
+        const icon = { isSelected }
+        const user_id = 1;
 
-    //     const highlight = event.target.highlight.value;
-    //     const lowlight = event.target.lowlight.value;
-    //     const user_id = 1;
-    //     const icon_id = 21;
+        console.log(score);
+        console.log(icon);
+        console.log(user_id);
 
-    //     axios
-    //         .post(`http://localhost:8080/journal-entry`, {
-    //             highlight: highlight,
-    //             lowlight: lowlight,
-    //             user_id: user_id,
-    //             icon_id: icon_id
-    //         })
-    //         .then(() => {
-    //             fetchIcon();
-    //             event.target.reset();
-    //         })
-    //         .catch(err => console.log(err));
-    // }
+        axios
+            .post(`http://localhost:8080/icons`, {
+                score: score,
+                icon: icon,
+                user_id: user_id,
+            })
+            .then(() => {
+                fetchIcon();
+                event.target.reset();
+            })
+            .catch(err => console.log(err));
+    }
 
-    // if (!addIcon) {
-    //     return <div>Loading....</div>
-    // }
+    if (!addIcon) {
+        return <div>Loading....</div>
+    }
 
     if (!open) return null;
 
@@ -67,22 +68,23 @@ const JournalSlideUp = ({ open, onClose, infoBox, isSelected }) => {
         <section className='slide-up'>
             <div className='slide-up__headline-container'>
                 <div className='slide-up__headline'>
-                    <h2 className='slide-up__title'>{isSelected}</h2>
+                    <label className='slide-up__title'>{isSelected}</label>
                     <img className='slide-up__icon-info' src={infoIcon} alt='Info icon' onClick={() => setInfoClick(true)}></img>
                 </div>
                 <img className='slide-up__icon-close' src={closeIcon} alt='Close Icon' onClick={onClose}></img>
             </div>
-            <div className='slide-up__slider-container'>
-                <input type='range' min='1' max='10' value={value} className='slider' onChange={({ target: { value: radius } }) => {
-                    onChange(radius);
-                }}>
-                </input>
-                <div className="slide-up__value">
-                    {value}
+            <form className='slide-up__form' onSubmit={handleIconSubmit}>
+                <div className='slide-up__slider-container'>
+                    <input type='range' min='1' max='10' value={value} className='value' name='score' onChange={({ target: { value: radius } }) => {
+                        onChange(radius);
+                    }}>
+                    </input>
+                    <div className="slide-up__value">
+                        {value}
+                    </div>
                 </div>
-            </div>
-            <button className='slide-up__button' onClick={onClose} type='submit'>track</button>
-
+                <button className='slide-up__button' onClick={onClose} type='submit'>track</button>
+            </form>
             <JournalInfoBox infoClick={infoClick} infoClose={() => setInfoClick(false)} infoBox={infoBox} isSelected={isSelected} />
         </section>
     );

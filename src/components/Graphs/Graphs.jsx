@@ -10,7 +10,7 @@ const Graphs = () => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8080/`)
+            .get(`http://localhost:8080/icons`)
             .then((res) => {
                 setGraphData(res.data);
             })
@@ -49,19 +49,13 @@ const Graphs = () => {
         outdoors.push(category.outdoors);
         fitness.push(category.fitness);
         social.push(category.social);
-        selfCare.push(category.selfCare);
-        timestamp.push(category.created_at);
+        selfCare.push(category.selfcare);
+        timestamp.push(category.date);
     })
-
-    let dates = []
-    timestamp.map((date) => {
-        dates.push(date.slice(5, 10))
-    })
-    console.log(dates)
 
     return (
         <>
-            <LineChart className="graph" graphData={graphData} type={happy} name='Happy' dates={dates} />
+            <LineChart className="graph" graphData={graphData} type={happy} name='Happy' />
             <LineChart graphData={graphData} type={sad} name='Sad' />
             <LineChart graphData={graphData} type={laughs} name='Laughs' />
             <LineChart graphData={graphData} type={frustrated} name='Frustrated' />

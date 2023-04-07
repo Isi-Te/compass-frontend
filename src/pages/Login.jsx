@@ -45,7 +45,7 @@ const Login = ({ setIsUserLoggedIn }) => {
                 <input className='login__input' name='username'></input>
                 <label className='login__label' name='password'>Password:</label>
                 <input className='login__input' type='password' name='password'></input>
-                <Link to='/compass'><button className='login__button' type='submit'>Login</button></Link>
+                <button className='login__button' type='submit'>Login</button>
             </form>
         </section>
     );

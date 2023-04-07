@@ -1,0 +1,11 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.chartbox {
+    width: 90%;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    border: 0.1rem solid $secondary-light-grey;
+    border-radius: 0.625rem;
+}
