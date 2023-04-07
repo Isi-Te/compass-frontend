@@ -3,13 +3,15 @@
 @use '../../styles/partials/mixins' as *;
 
 .journal {
-    @include mobile-layout;
+    // @include mobile-layout;
+    padding-bottom: 1.5rem;
 
     &__title {
         text-align: right;
         margin: 0;
         padding-bottom: 1.5rem;
         margin-top: -1.75rem;
+        color: $primary-white;
     }
 
     &__icon {
@@ -22,6 +24,7 @@
         margin: 0;
         text-align: center;
         text-transform: capitalize;
+        margin-right: 0.5rem;
     }
 
     &__emotional-health,
@@ -31,5 +34,21 @@
         justify-content: space-between;
         padding: 1rem 0;
 
+    }
+
+    &__input {
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 0.75rem;
+        color: $primary-cyan;
+        border-color: $primary-cyan;
+        border-radius: 50%;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    &__icon-box {
+        display: flex;
+        align-items: center;
     }
 }

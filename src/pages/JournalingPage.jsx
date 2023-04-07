@@ -8,7 +8,7 @@ const JournalingPage = () => {
     return (
         <section>
             <Calendar />
-            <JournalIcons />
+            {/* <JournalIcons /> */}
             <JournalEntry />
             <Navigation />
         </section>

@@ -10,7 +10,7 @@ const Graphs = () => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8080/icons`)
+            .get(`http://localhost:8080/journal-entry`)
             .then((res) => {
                 setGraphData(res.data);
             })
@@ -25,13 +25,10 @@ const Graphs = () => {
 
     let happy = [];
     let sad = [];
-    let laughs = [];
     let frustrated = [];
     let stress = [];
     let sleep = [];
     let nutrition = [];
-    let energy = [];
-    let outdoors = [];
     let fitness = [];
     let social = [];
     let selfCare = [];
@@ -40,13 +37,10 @@ const Graphs = () => {
     graphData.map((category) => {
         happy.push(category.happy);
         sad.push(category.sad);
-        laughs.push(category.laughs);
         frustrated.push(category.frustrated);
         stress.push(category.stress);
         sleep.push(category.sleep);
         nutrition.push(category.nutrition);
-        energy.push(category.energy);
-        outdoors.push(category.outdoors);
         fitness.push(category.fitness);
         social.push(category.social);
         selfCare.push(category.selfcare);
@@ -57,19 +51,16 @@ const Graphs = () => {
         <>
             <LineChart className="graph" graphData={graphData} type={happy} name='Happy' />
             <LineChart graphData={graphData} type={sad} name='Sad' />
-            <LineChart graphData={graphData} type={laughs} name='Laughs' />
             <LineChart graphData={graphData} type={frustrated} name='Frustrated' />
             <LineChart graphData={graphData} type={stress} name='Stress level' />
             <LineChart graphData={graphData} type={sleep} name='Sleep' />
             <LineChart graphData={graphData} type={nutrition} name='Nutrition' />
-            <LineChart graphData={graphData} type={energy} name='Energy Levels' />
-            <LineChart graphData={graphData} type={outdoors} name='Time outdoors' />
             <LineChart graphData={graphData} type={fitness} name='Fitness' />
             <LineChart graphData={graphData} type={social} name='Social' />
             <LineChart graphData={graphData} type={selfCare} name='Self-care' />
+            <div className='graph__placeholder'></div>
         </>
     );
-
 };
 
 export default Graphs;
