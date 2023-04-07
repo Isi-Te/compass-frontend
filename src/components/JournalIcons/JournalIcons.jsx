@@ -50,10 +50,6 @@ const JournalIcons = () => {
                     <h4 className='journal__icon-title'>{category[1]}</h4>
                 </div>
                 <div className='journal__emo-container' onClick={(() => setIsOpen(true))}>
-                    <img className='journal__icon journal__icon-laugh' src={laughIcon} alt='laughing face icon' title='laughs' onClick={handleOnClick}></img>
-                    <h4 className='journal__icon-title'>{category[2]}</h4>
-                </div>
-                <div className='journal__emo-container' onClick={(() => setIsOpen(true))}>
                     <img className='journal__icon journal__icon-angry' src={angryIcon} alt='angry face icon' title='frustrated' onClick={handleOnClick}></img>
                     <h4 className='journal__icon-title'>{category[3]}</h4>
                 </div>
@@ -72,16 +68,8 @@ const JournalIcons = () => {
                     <img className='journal__icon journal__icon-nutrition' src={nutritionIcon} alt='apple icon' title='nutrition' onClick={handleOnClick}></img>
                     <h4 className='journal__icon-title'>{category[6]}</h4>
                 </div>
-                <div className='journal__physics-container' onClick={(() => setIsOpen(true))}>
-                    <img className='journal__icon journal__icon-energy' src={energyIcon} alt='battery icon' title='energy-levels' onClick={handleOnClick}></img>
-                    <h4 className='journal__icon-title'>{category[7]}</h4>
-                </div>
             </div>
             <div className='journal__activity'>
-                <div className='journal__activity-container' onClick={(() => setIsOpen(true))}>
-                    <img className='journal__icon journal__icon-nature' src={natureIcon} alt='trees icon' title='outdoors' onClick={handleOnClick}></img>
-                    <h4 className='journal__icon-title'>{category[8]}</h4>
-                </div>
                 <div className='journal__activity-container' onClick={(() => setIsOpen(true))}>
                     <img className='journal__icon journal__icon-fitness' src={fitnessIcon} alt='dumbell icon' title='fitness' onClick={handleOnClick}></img>
                     <h4 className='journal__icon-title'>{category[9]}</h4>

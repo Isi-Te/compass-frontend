@@ -4,6 +4,7 @@
 
 .journal-entry {
     @include mobile-layout;
+    padding-bottom: 5rem;
 
     &__input {
         height: 2.75rem;
