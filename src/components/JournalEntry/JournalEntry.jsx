@@ -133,9 +133,9 @@ const JournalEntry = () => {
 
     return (
         <section className='journal-entry'>
+            <h1 className='journal__title'>Daily Journaling</h1>
             <form className='journal-entry__form' onSubmit={handleSubmit}>
                 <section className='journal'>
-                    <h1 className='journal__title'>Daily Journaling</h1>
                     <div className='journal__emotional-health'>
                         <div className='journal__emo-container' onClick={(() => setIsOpen(true))}>
                             <img className='journal__icon journal__icon-happy' src={happyIcon} alt='happy face icon' title='happy' onClick={handleOnClick}></img>

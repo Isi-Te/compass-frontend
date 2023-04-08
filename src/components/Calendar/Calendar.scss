@@ -6,6 +6,7 @@
     @include mobile-layout;
     color: $secondary-dark-grey;
     border-bottom: solid 0.1rem $secondary-light-grey;
+    padding-bottom: 1rem;
 
     &__title {
         display: flex;
@@ -41,5 +42,15 @@
 
     &__date {
         font-weight: 600;
+        text-align: center;
+        padding-top: 0.25rem;
+    }
+
+    &__today {
+        background-color: $primary-turquoise;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        color: $primary-white;
     }
 }
