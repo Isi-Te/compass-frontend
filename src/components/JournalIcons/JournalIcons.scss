@@ -17,7 +17,6 @@
     &__icon {
         width: 3.5rem;
         height: 3.5rem;
-
     }
 
     &__icon-title {
@@ -25,6 +24,7 @@
         text-align: center;
         text-transform: capitalize;
         margin-right: 0.5rem;
+        width: 70%;
     }
 
     &__emotional-health,
@@ -50,5 +50,12 @@
     &__icon-box {
         display: flex;
         align-items: center;
+    }
+
+    &__activity-container,
+    &__physics-container,
+    &__emo-container {
+        margin: 0 0.75rem;
+        width: 30%;
     }
 }

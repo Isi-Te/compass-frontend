@@ -19,12 +19,19 @@ const Insights = () => {
         return <div>Loading....</div>
     }
 
+    //Stress Score:
+    const stressScore = graphData.map((item) => {
+        return (item.stress)
+    })
+    const sumStress = stressScore => stressScore.reduce((a, b) => a + b, 0);
+    const averageStress = ((sumStress(stressScore) / (stressScore.length)));
+
     //Scorecard Happiness Rate:
     const happyScore = graphData.map((item) => {
-        return (item.fitness + item.nutrition + item.selfcare + item.sleep + item.social + item.stress)
+        return (item.fitness + item.nutrition + item.selfcare + item.sleep + item.social)
     })
     const sumHappy = happyScore => happyScore.reduce((a, b) => a + b, 0);
-    const averageHappy = ((sumHappy(happyScore) / (happyScore.length * 60)) * 100);
+    const averageHappy = (((sumHappy(happyScore) - (sumStress(stressScore))) / (happyScore.length * 50)) * 100);
 
     //Fitness Score:
     const fitnessScore = graphData.map((item) => {
@@ -33,12 +40,7 @@ const Insights = () => {
     const sumFitness = fitnessScore => fitnessScore.reduce((a, b) => a + b, 0);
     const averageFitness = ((sumFitness(fitnessScore) / (fitnessScore.length)));
 
-    //Stress Score:
-    const stressScore = graphData.map((item) => {
-        return (item.stress)
-    })
-    const sumStress = stressScore => stressScore.reduce((a, b) => a + b, 0);
-    const averageStress = ((sumStress(stressScore) / (stressScore.length)));
+
 
     //Nutrition Score:
     const nutritionScore = graphData.map((item) => {

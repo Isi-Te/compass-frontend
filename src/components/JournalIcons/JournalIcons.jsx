@@ -9,7 +9,7 @@ import nutritionIcon from '../../assets/icons/nutrition-icon.svg';
 import fitnessIcon from '../../assets/icons/fitness-icon.svg';
 import socialIcon from '../../assets/icons/social-icon.svg';
 import selfCareIcon from '../../assets/icons/self-care-icon.svg';
-import JournalSlideUp from '../JournalSlideUp/JournalSlideUp';
+// import JournalSlideUp from '../JournalSlideUp/JournalSlideUp';
 import axios from 'axios';
 
 const JournalIcons = () => {
@@ -25,7 +25,7 @@ const JournalIcons = () => {
     const [nutrition, setNutrition] = useState();
     const [fitness, setFitness] = useState();
     const [social, setSocial] = useState();
-    const [selfcare, setSelfcare] = useState();
+    const [qualityTime, setQualityTime] = useState();
 
     useEffect(() => {
         axios
@@ -68,12 +68,12 @@ const JournalIcons = () => {
         if (isSelected === 'social') {
             setSocial(event.target.value)
         }
-        if (isSelected === 'self-care') {
-            setSelfcare(event.target.value)
+        if (isSelected === 'quality-time') {
+            setQualityTime(event.target.value)
         }
     }
 
-    const category = ['happy', 'sad', 'frustrated', 'stress', 'sleep', 'nutrition', 'fitness', 'social', 'self-care']
+    const category = ['happy', 'sad', 'frustrated', 'stress', 'sleep', 'nutrition', 'fitness', 'social', 'quality time']
 
     return (
         <section className='journal'>
@@ -142,15 +142,15 @@ const JournalIcons = () => {
                         </div>
                     </div>
                     <div className='journal__activity-container' onClick={(() => setIsOpen(true))}>
-                        <img className='journal__icon journal__icon-self-care' src={selfCareIcon} alt='yoga pose icon' title='self-care' onClick={handleOnClick}></img>
+                        <img className='journal__icon journal__icon-self-care' src={selfCareIcon} alt='yoga pose icon' title='quality-time' onClick={handleOnClick}></img>
                         <div className='journal__icon-box'>
                             <h4 className='journal__icon-title'>{category[8]}</h4>
-                            <input className='journal__input' type='number' value={selfcare}></input>
+                            <input className='journal__input' type='number' value={qualityTime}></input>
                         </div >
                     </div >
                 </div >
             </form>
-            <JournalSlideUp open={isOpen} onClose={() => setIsOpen(false)} infoBox={infoBox} isSelected={isSelected} value={value} onChange={onChange} handleOnSave={handleOnSave} />
+            {/* <JournalSlideUp open={isOpen} onClose={() => setIsOpen(false)} infoBox={infoBox} isSelected={isSelected} value={value} onChange={onChange} handleOnSave={handleOnSave} /> */}
         </section >
     );
 };

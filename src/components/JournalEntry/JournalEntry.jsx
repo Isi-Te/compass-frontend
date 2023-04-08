@@ -12,7 +12,7 @@ import sleepIcon from '../../assets/icons/sleep-icon.svg';
 import nutritionIcon from '../../assets/icons/nutrition-icon.svg';
 import fitnessIcon from '../../assets/icons/fitness-icon.svg';
 import socialIcon from '../../assets/icons/social-icon.svg';
-import selfCareIcon from '../../assets/icons/self-care-icon.svg';
+import qualityTimeIcon from '../../assets/icons/quality-time-icon.svg';
 import JournalSlideUp from '../JournalSlideUp/JournalSlideUp';
 
 const JournalEntry = () => {
@@ -29,8 +29,8 @@ const JournalEntry = () => {
     const [nutrition, setNutrition] = useState();
     const [fitness, setFitness] = useState();
     const [social, setSocial] = useState();
-    const [selfcare, setSelfcare] = useState();
-    const category = ['happy', 'sad', 'frustrated', 'stress', 'sleep', 'nutrition', 'fitness', 'social', 'self-care']
+    const [qualityTime, setQualityTime] = useState();
+    const category = ['happy', 'sad', 'frustrated', 'stress', 'sleep', 'nutrition', 'fitness', 'social', 'quality time']
 
     useEffect(() => {
         axios
@@ -72,8 +72,8 @@ const JournalEntry = () => {
         if (isSelected === 'social') {
             setSocial(event.target.value)
         }
-        if (isSelected === 'self-care') {
-            setSelfcare(event.target.value)
+        if (isSelected === 'qualitytime') {
+            setQualityTime(event.target.value)
         }
     }
 
@@ -103,7 +103,7 @@ const JournalEntry = () => {
         const nutrition = event.target.nutrition.value;
         const fitness = event.target.fitness.value;
         const social = event.target.social.value;
-        const selfcare = event.target.selfcare.value;
+        const qualitytime = event.target.qualitytime.value;
 
         axios
             .post(`http://localhost:8080/journal-entry`, {
@@ -115,7 +115,7 @@ const JournalEntry = () => {
                 nutrition: nutrition,
                 fitness: fitness,
                 social: social,
-                selfcare: selfcare,
+                qualitytime: qualitytime,
                 highlight: highlight,
                 lowlight: lowlight,
                 user_id: user_id,
@@ -199,20 +199,20 @@ const JournalEntry = () => {
                             </div>
                         </div>
                         <div className='journal__activity-container' onClick={(() => setIsOpen(true))}>
-                            <img className='journal__icon journal__icon-self-care' src={selfCareIcon} alt='yoga pose icon' title='self-care' onClick={handleOnClick}></img>
+                            <img className='journal__icon journal__icon-self-care' src={qualityTimeIcon} alt='yoga pose icon' title='quality time' onClick={handleOnClick}></img>
                             <div className='journal__icon-box'>
                                 <h4 className='journal__icon-title'>{category[8]}</h4>
-                                <input className='journal__input' type='number' name='selfcare' value={selfcare} required></input>
+                                <input className='journal__input' type='number' name='qualitytime' value={qualityTime} required></input>
                             </div >
                         </div >
                     </div >
                     <JournalSlideUp open={isOpen} onClose={() => setIsOpen(false)} infoBox={infoBox} isSelected={isSelected} value={value} onChange={onChange} handleOnSave={handleOnSave} />
                 </section >
                 <div className='journal-entry__highlight'>
-                    <input className='journal-entry__input journal-entry__input--highlight' placeholder='What made your day?' name='highlight' minlength='2' maxlength='30' required></input>
+                    <input className='journal-entry__input journal-entry__input--highlight' placeholder='What made your day?' name='highlight' minLength='2' maxLength='30' required></input>
                 </div>
                 <div className='journal-entry__stress'>
-                    <input className='journal-entry__input journal-entry__input--lowlight' placeholder='What bothered you today?' name='lowlight' minlength='2' maxlength='30' required></input>
+                    <input className='journal-entry__input journal-entry__input--lowlight' placeholder='What bothered you today?' name='lowlight' minLength='2' maxLength='30' required></input>
                 </div>
                 <div className='journal-entry__button'>
                     <Link to='/compass'><Button className='journal-entry__button-cancel' name='button__cancel' type='cancel' title='cancel' /></Link>
