@@ -141,21 +141,21 @@ const JournalEntry = () => {
                             <img className='journal__icon journal__icon-happy' src={happyIcon} alt='happy face icon' title='happy' onClick={handleOnClick}></img>
                             <div className='journal__icon-box'>
                                 <h4 className='journal__icon-title' title='happy'>{category[0]} </h4>
-                                <input className='journal__input' type='number' name='happy' value={happy}></input>
+                                <input className='journal__input' type='number' name='happy' value={happy} required></input>
                             </div>
                         </div>
                         <div className='journal__emo-container' onClick={(() => setIsOpen(true))}>
                             <img className='journal__icon journal__icon-sad' src={sadIcon} alt='sad face icon' title='sad' onClick={handleOnClick}></img>
                             <div className='journal__icon-box'>
                                 <h4 className='journal__icon-title'>{category[1]}</h4>
-                                <input className='journal__input' type='number' name='sad' value={sad}></input>
+                                <input className='journal__input' type='number' name='sad' value={sad} required></input>
                             </div>
                         </div>
                         <div className='journal__emo-container' onClick={(() => setIsOpen(true))}>
                             <img className='journal__icon journal__icon-angry' src={angryIcon} alt='angry face icon' title='frustrated' onClick={handleOnClick}></img>
                             <div className='journal__icon-box'>
                                 <h4 className='journal__icon-title'>{category[2]}</h4>
-                                <input className='journal__input' type='number' name='frustrated' value={frustrated}></input>
+                                <input className='journal__input' type='number' name='frustrated' value={frustrated} required></input>
                             </div>
                         </div>
                     </div>
@@ -165,21 +165,21 @@ const JournalEntry = () => {
                             <img className='journal__icon journal__icon-stress' src={stressIcon} alt='thunder icon' title='stress' onClick={handleOnClick}></img>
                             <div className='journal__icon-box'>
                                 <h4 className='journal__icon-title'>{category[3]}</h4>
-                                <input className='journal__input' type='number' name='stress' value={stress}></input>
+                                <input className='journal__input' type='number' name='stress' value={stress} required></input>
                             </div>
                         </div>
                         <div className='journal__physics-container' onClick={(() => setIsOpen(true))}>
                             <img className='journal__icon journal__icon-sleep' src={sleepIcon} alt='half moon icon' title='sleep' onClick={handleOnClick}></img>
                             <div className='journal__icon-box'>
                                 <h4 className='journal__icon-title'>{category[4]}</h4>
-                                <input className='journal__input' type='number' name='sleep' value={sleep}></input>
+                                <input className='journal__input' type='number' name='sleep' value={sleep} required></input>
                             </div>
                         </div>
                         <div className='journal__physics-container' onClick={(() => setIsOpen(true))}>
                             <img className='journal__icon journal__icon-nutrition' src={nutritionIcon} alt='apple icon' title='nutrition' onClick={handleOnClick}></img>
                             <div className='journal__icon-box'>
                                 <h4 className='journal__icon-title'>{category[5]}</h4>
-                                <input className='journal__input' type='number' name='nutrition' value={nutrition}></input>
+                                <input className='journal__input' type='number' name='nutrition' value={nutrition} required></input>
                             </div>
                         </div>
                     </div>
@@ -188,31 +188,31 @@ const JournalEntry = () => {
                             <img className='journal__icon journal__icon-fitness' src={fitnessIcon} alt='dumbell icon' title='fitness' onClick={handleOnClick}></img>
                             <div className='journal__icon-box'>
                                 <h4 className='journal__icon-title'>{category[6]}</h4>
-                                <input className='journal__input' type='number' name='fitness' value={fitness}></input>
+                                <input className='journal__input' type='number' name='fitness' value={fitness} required></input>
                             </div>
                         </div>
                         <div className='journal__activity-container' onClick={(() => setIsOpen(true))}>
                             <img className='journal__icon journal__icon-social' src={socialIcon} alt='people icon' title='social' onClick={handleOnClick}></img>
                             <div className='journal__icon-box'>
                                 <h4 className='journal__icon-title'>{category[7]}</h4>
-                                <input className='journal__input' type='number' name='social' value={social}></input>
+                                <input className='journal__input' type='number' name='social' value={social} required></input>
                             </div>
                         </div>
                         <div className='journal__activity-container' onClick={(() => setIsOpen(true))}>
                             <img className='journal__icon journal__icon-self-care' src={selfCareIcon} alt='yoga pose icon' title='self-care' onClick={handleOnClick}></img>
                             <div className='journal__icon-box'>
                                 <h4 className='journal__icon-title'>{category[8]}</h4>
-                                <input className='journal__input' type='number' name='selfcare' value={selfcare}></input>
+                                <input className='journal__input' type='number' name='selfcare' value={selfcare} required></input>
                             </div >
                         </div >
                     </div >
                     <JournalSlideUp open={isOpen} onClose={() => setIsOpen(false)} infoBox={infoBox} isSelected={isSelected} value={value} onChange={onChange} handleOnSave={handleOnSave} />
                 </section >
                 <div className='journal-entry__highlight'>
-                    <input className='journal-entry__input journal-entry__input--highlight' placeholder='What made your day?' name='highlight'></input>
+                    <input className='journal-entry__input journal-entry__input--highlight' placeholder='What made your day?' name='highlight' minlength='2' maxlength='30' required></input>
                 </div>
                 <div className='journal-entry__stress'>
-                    <input className='journal-entry__input journal-entry__input--lowlight' placeholder='What bothered you today?' name='lowlight'></input>
+                    <input className='journal-entry__input journal-entry__input--lowlight' placeholder='What bothered you today?' name='lowlight' minlength='2' maxlength='30' required></input>
                 </div>
                 <div className='journal-entry__button'>
                     <Link to='/compass'><Button className='journal-entry__button-cancel' name='button__cancel' type='cancel' title='cancel' /></Link>

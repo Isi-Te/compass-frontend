@@ -16,7 +16,7 @@
         font-size: 0.75rem;
         color: $secondary-light-grey;
         padding-right: 0.5rem;
-        border: 0.1rem solid $secondary-light-grey;
+        border: 0.1rem solid $primary-cyan;
         -webkit-transition: 0.5s;
         transition: 0.5s;
         outline: none;
@@ -38,7 +38,12 @@
     }
 
     &__input:focus {
-        border: 0.1rem solid $primary-cyan;
+        border: 0.15rem solid $primary-cyan;
+        color: $primary-cyan;
+    }
+
+    &__input:invalid {
+        border: 0.1rem solid $secondary-dark-grey;
         color: $primary-cyan;
     }
 

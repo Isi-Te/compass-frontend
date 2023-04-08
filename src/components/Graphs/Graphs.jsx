@@ -47,6 +47,11 @@ const Graphs = () => {
         timestamp.push(category.date);
     })
 
+    //Baseline -- later integration
+    const sum = happy => happy.reduce((a, b) => a + b, 0)
+    const average = (sum(happy) / happy.length);
+    console.log(average);
+
     return (
         <>
             <LineChart className="graph" graphData={graphData} type={happy} name='Happy' />
