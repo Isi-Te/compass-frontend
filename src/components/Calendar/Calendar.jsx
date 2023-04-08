@@ -16,10 +16,7 @@ const Calendar = () => {
     const currentMonth = getMonthName(month)
 
     let weekday = newDate.getDay()
-    console.log(weekday);
-
     const daysOfWeek = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
-    console.log(daysOfWeek[6]);
 
     return (
         <section className='calendar'>
