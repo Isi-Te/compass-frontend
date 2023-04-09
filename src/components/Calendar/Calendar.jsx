@@ -16,7 +16,7 @@ const Calendar = () => {
     const currentMonth = getMonthName(month)
 
     let weekday = newDate.getDay()
-    const daysOfWeek = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
+    const daysOfWeek = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su', 'Mo', 'Tu'];
 
     return (
         <section className='calendar'>
@@ -25,13 +25,13 @@ const Calendar = () => {
             </div>
             <div className='calender__container'>
                 <div className='calendar__week-day'>
-                    <h3 className='calendar__weekday'>{daysOfWeek[(weekday - 3)]}</h3>
-                    <h3 className='calendar__weekday'>{daysOfWeek[(weekday - 2)]}</h3>
-                    <h3 className='calendar__weekday'>{daysOfWeek[(weekday - 1)]}</h3>
+                    <h3 className='calendar__weekday'>{daysOfWeek[(weekday + 4)]}</h3>
+                    <h3 className='calendar__weekday'>{daysOfWeek[(weekday + 5)]}</h3>
+                    <h3 className='calendar__weekday'>{daysOfWeek[(weekday + 6)]}</h3>
                     <h3 className='calendar__weekday'>{daysOfWeek[weekday]}</h3>
-                    <h3 className='calendar__weekday'>{daysOfWeek[(weekday - 6)]}</h3>
-                    <h3 className='calendar__weekday'>{daysOfWeek[(weekday - 5)]}</h3>
-                    <h3 className='calendar__weekday'>{daysOfWeek[(weekday - 4)]}</h3>
+                    <h3 className='calendar__weekday'>{daysOfWeek[(weekday + 1)]}</h3>
+                    <h3 className='calendar__weekday'>{daysOfWeek[(weekday + 2)]}</h3>
+                    <h3 className='calendar__weekday'>{daysOfWeek[(weekday + 3)]}</h3>
                 </div>
                 <div className='calendar__week-date'>
                     <h3 className='calendar__date'>{(today - 3).toString().padStart(2, '0')}</h3>

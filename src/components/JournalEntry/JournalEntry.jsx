@@ -79,6 +79,7 @@ const JournalEntry = () => {
         if (isSelected === 'qualitytime') {
             setQualityTime(event.target.value)
         }
+
     }
 
     const fetchEntry = () => {
