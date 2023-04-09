@@ -28,7 +28,7 @@ const Insights = () => {
 
     //Scorecard Happiness Rate:
     const happyScore = graphData.map((item) => {
-        return (item.fitness + item.nutrition + item.selfcare + item.sleep + item.social)
+        return (item.fitness + item.nutrition + item.qualitytime + item.sleep + item.social)
     })
     const sumHappy = happyScore => happyScore.reduce((a, b) => a + b, 0);
     const averageHappy = (((sumHappy(happyScore) - (sumStress(stressScore))) / (happyScore.length * 50)) * 100);
@@ -49,12 +49,12 @@ const Insights = () => {
     const sumNutrition = nutritionScore => nutritionScore.reduce((a, b) => a + b, 0);
     const averageNutrition = ((sumNutrition(nutritionScore) / (nutritionScore.length)));
 
-    //Self-care Score:
-    const selfCareScore = graphData.map((item) => {
-        return (item.selfcare)
+    //Quality Time Score:
+    const qualitytimeScore = graphData.map((item) => {
+        return (item.qualitytime)
     })
-    const sumSelfCare = selfCareScore => selfCareScore.reduce((a, b) => a + b, 0);
-    const averageSelfCare = ((sumSelfCare(selfCareScore) / (selfCareScore.length)));
+    const sumQualitytime = qualitytimeScore => qualitytimeScore.reduce((a, b) => a + b, 0);
+    const averageQualitytime = ((sumQualitytime(qualitytimeScore) / (qualitytimeScore.length)));
 
     //Nutrition Score:
     const sleepScore = graphData.map((item) => {
@@ -92,8 +92,8 @@ const Insights = () => {
                         <p className='insights__rating'>{averageNutrition.toFixed(1)}/10</p>
                     </div>
                     <div className='insights__ratings-category'>
-                        <p className='insights__rating'>Self-Care:</p>
-                        <p className='insights__rating'>{averageSelfCare.toFixed(1)}/10</p>
+                        <p className='insights__rating'>Quality Time:</p>
+                        <p className='insights__rating'>{averageQualitytime.toFixed(1)}/10</p>
                     </div>
                     <div className='insights__ratings-category'>
                         <p className='insights__rating'>Sleep:</p>

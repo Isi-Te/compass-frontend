@@ -5,10 +5,6 @@ import './LineChart.scss';
 
 const LineChart = ({ type, name, graphData }) => {
 
-    console.log({ type });
-    console.log({ name });
-    console.log({ graphData });
-
     const data = {
         labels: graphData.map((data) => data.date.slice(5, 10)),
         datasets: [

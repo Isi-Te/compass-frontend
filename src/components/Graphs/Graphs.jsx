@@ -31,7 +31,7 @@ const Graphs = () => {
     let nutrition = [];
     let fitness = [];
     let social = [];
-    let selfCare = [];
+    let qualitytime = [];
     let timestamp = [];
 
     graphData.map((category) => {
@@ -43,7 +43,7 @@ const Graphs = () => {
         nutrition.push(category.nutrition);
         fitness.push(category.fitness);
         social.push(category.social);
-        selfCare.push(category.selfcare);
+        qualitytime.push(category.qualitytime);
         timestamp.push(category.date);
     })
 
@@ -62,7 +62,7 @@ const Graphs = () => {
             <LineChart graphData={graphData} type={nutrition} name='Nutrition' />
             <LineChart graphData={graphData} type={fitness} name='Fitness' />
             <LineChart graphData={graphData} type={social} name='Social' />
-            <LineChart graphData={graphData} type={selfCare} name='Self-care' />
+            <LineChart graphData={graphData} type={qualitytime} name='Self-care' />
             <div className='graph__placeholder'></div>
         </>
     );
