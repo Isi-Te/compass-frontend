@@ -1,0 +1,42 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.general {
+    @include mobile-layout;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        border-top: 0.2rem solid $primary-white;
+        background-color: $secondary-light-grey;
+        color: $secondary-dark-grey;
+        padding: 0 1rem;
+        border-radius: 0.625rem;
+    }
+
+    &__sign-out {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2.75rem;
+    }
+
+    &__icon-sign-out {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    &__button {
+        color: $primary-cyan;
+        background-color: transparent;
+        text-transform: uppercase;
+        border: none;
+        font-weight: 600;
+        height: 1.25rem;
+        cursor: pointer;
+        width: 100%;
+        min-width: 9rem;
+    }
+}

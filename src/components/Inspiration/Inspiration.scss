@@ -1,0 +1,22 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.inspiration {
+    @include mobile-layout;
+
+    &__container {
+        width: 100%;
+        background-color: $primary-cyan;
+        opacity: 50%;
+        border-radius: 0.625rem;
+        padding: 1.25rem;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__quote {
+        font-size: 1rem;
+        padding: 0.1rem 0 0 0.2rem;
+    }
+}
