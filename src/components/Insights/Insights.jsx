@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './Insights.scss';
-import insightsIcon from '../../assets/icons/insights-white-icon.svg';
+import insightsIcon from '../../assets/icons/personalize-white-icon.svg';
 import axios from 'axios';
 
 const Insights = () => {
-    const [graphData, setGraphData] = useState();
+    const [graphData, setGraphData] = useState(null);
 
     useEffect(() => {
-        axios
-            .get(`http://localhost:8080/journal-entry`)
-            .then((res) => {
-                setGraphData(res.data);
-            })
+        axios.get('http://localhost:8080/journal-entry')
+            .then(res => setGraphData(res.data))
             .catch(error => console.error(error));
     }, []);
 
@@ -19,57 +16,23 @@ const Insights = () => {
         return <div>Loading....</div>
     }
 
-    //Stress Score:
-    const stressScore = graphData.map((item) => {
-        return (item.stress)
-    })
-    const sumStress = stressScore => stressScore.reduce((a, b) => a + b, 0);
-    const averageStress = ((sumStress(stressScore) / (stressScore.length)));
+    const sum = (data, key) => data.reduce((a, b) => a + b[key], 0);
+    const average = (data, key) => sum(data, key) / data.length;
 
-    //Scorecard Happiness Rate:
-    const happyScore = graphData.map((item) => {
-        return (item.fitness + item.nutrition + item.qualitytime + item.sleep + item.social)
-    })
-    const sumHappy = happyScore => happyScore.reduce((a, b) => a + b, 0);
-    const averageHappy = (((sumHappy(happyScore) - (sumStress(stressScore))) / (happyScore.length * 50)) * 100);
+    const averageStress = average(graphData, 'stress');
+    const averageFitness = average(graphData, 'fitness');
+    const averageNutrition = average(graphData, 'nutrition');
+    const averageQualitytime = average(graphData, 'qualitytime');
+    const averageSleep = average(graphData, 'sleep');
+    const averageSocial = average(graphData, 'social');
 
-    //Fitness Score:
-    const fitnessScore = graphData.map((item) => {
-        return (item.fitness)
-    })
-    const sumFitness = fitnessScore => fitnessScore.reduce((a, b) => a + b, 0);
-    const averageFitness = ((sumFitness(fitnessScore) / (fitnessScore.length)));
-
-
-
-    //Nutrition Score:
-    const nutritionScore = graphData.map((item) => {
-        return (item.nutrition)
-    })
-    const sumNutrition = nutritionScore => nutritionScore.reduce((a, b) => a + b, 0);
-    const averageNutrition = ((sumNutrition(nutritionScore) / (nutritionScore.length)));
-
-    //Quality Time Score:
-    const qualitytimeScore = graphData.map((item) => {
-        return (item.qualitytime)
-    })
-    const sumQualitytime = qualitytimeScore => qualitytimeScore.reduce((a, b) => a + b, 0);
-    const averageQualitytime = ((sumQualitytime(qualitytimeScore) / (qualitytimeScore.length)));
-
-    //Nutrition Score:
-    const sleepScore = graphData.map((item) => {
-        return (item.sleep)
-    })
-    const sumSleep = sleepScore => sleepScore.reduce((a, b) => a + b, 0);
-    const averageSleep = ((sumSleep(sleepScore) / (sleepScore.length)));
-
-    //Social Score:
-    const socialScore = graphData.map((item) => {
-        return (item.social)
-    })
-    const sumSocial = socialScore => socialScore.reduce((a, b) => a + b, 0);
-    const averageSocial = ((sumSocial(socialScore) / (socialScore.length)));
-
+    const happyScore = sum(graphData, 'fitness') +
+        sum(graphData, 'nutrition') +
+        sum(graphData, 'qualitytime') +
+        sum(graphData, 'sleep') +
+        sum(graphData, 'social') -
+        (averageStress * graphData.length);
+    const averageHappy = (happyScore / (graphData.length * 50)) * 100;
 
     return (
         <section className='insights'>

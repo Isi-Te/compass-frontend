@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './SignUp.scss';
-import logoImg from '../assets/logo/compass-logo-transparent.png';
+import logoImg from '../assets/logo/compass-logo.png';
 import Login from './Login';
 import axios from 'axios';
 import { Link } from 'react-router-dom';

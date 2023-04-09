@@ -13,13 +13,14 @@
     &__headline {
         display: flex;
         justify-content: space-between;
-        border-bottom: 0.2rem solid $primary-white;
+        border-bottom: 0.2rem solid $primary-turquoise;
     }
 
     &__title {
         text-transform: uppercase;
         margin: 0;
         padding-bottom: 0.5rem;
+        color: $primary-white;
     }
 
     &__icon {

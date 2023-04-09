@@ -15,12 +15,15 @@ import socialIcon from '../../assets/icons/social-icon.svg';
 import qualityTimeIcon from '../../assets/icons/quality-time-icon.svg';
 import JournalSlideUp from '../JournalSlideUp/JournalSlideUp';
 
+const category = ['happy', 'sad', 'frustrated', 'stress', 'sleep', 'nutrition', 'fitness', 'social', 'quality time']
+
 const JournalEntry = () => {
     const [journalEntry, setJournalEntry] = useState([]);
     const [isOpen, setIsOpen] = useState(false);
     const [infoBox, setInfoBox] = useState([]);
     const [isSelected, setIsSelected] = useState(null);
     const [value, onChange] = useState(1);
+
     const [happy, setHappy] = useState();
     const [sad, setSad] = useState();
     const [frustrated, setFrustrated] = useState();
@@ -30,7 +33,7 @@ const JournalEntry = () => {
     const [fitness, setFitness] = useState();
     const [social, setSocial] = useState();
     const [qualityTime, setQualityTime] = useState();
-    const category = ['happy', 'sad', 'frustrated', 'stress', 'sleep', 'nutrition', 'fitness', 'social', 'quality time']
+
 
     useEffect(() => {
         axios
@@ -199,7 +202,7 @@ const JournalEntry = () => {
                             </div>
                         </div>
                         <div className='journal__activity-container' onClick={(() => setIsOpen(true))}>
-                            <img className='journal__icon journal__icon-self-care' src={qualityTimeIcon} alt='yoga pose icon' title='quality time' onClick={handleOnClick}></img>
+                            <img className='journal__icon journal__icon-self-care' src={qualityTimeIcon} alt='Heart icon' title='qualitytime' onClick={handleOnClick}></img>
                             <div className='journal__icon-box'>
                                 <h4 className='journal__icon-title'>{category[8]}</h4>
                                 <input className='journal__input' type='number' name='qualitytime' value={qualityTime} required></input>
