@@ -14,6 +14,7 @@ import fitnessIcon from '../../assets/icons/fitness-icon.svg';
 import socialIcon from '../../assets/icons/social-icon.svg';
 import qualityTimeIcon from '../../assets/icons/quality-time-icon.svg';
 import JournalSlideUp from '../JournalSlideUp/JournalSlideUp';
+import Loading from '../Loading/Loading';
 
 const category = ['happy', 'sad', 'frustrated', 'stress', 'sleep', 'nutrition', 'fitness', 'social', 'quality time']
 
@@ -131,7 +132,9 @@ const JournalEntry = () => {
     }
 
     if (!journalEntry) {
-        return <div>Loading....</div>
+        return <div>
+            <Loading />
+        </div>
     }
 
     return (

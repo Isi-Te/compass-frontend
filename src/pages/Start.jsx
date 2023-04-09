@@ -2,6 +2,7 @@ import './Start.scss';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logoImg from '../assets/logo/compass-logo.png';
+import Loading from '../components/Loading/Loading';
 
 
 const Start = () => {

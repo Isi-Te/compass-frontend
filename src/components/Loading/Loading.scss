@@ -1,0 +1,52 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.compass {
+    @include mobile-layout;
+    position: relative;
+
+    &__loading {
+        display: flex;
+        justify-content: center;
+        align-items: self-end;
+    }
+
+    &__base {
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+    }
+
+    &__arrow {
+        width: 99%;
+        margin: 0 auto;
+        position: absolute;
+        top: -0.3rem;
+        left: 0.3rem;
+        transform: rotate(20deg);
+        animation: spin 2.0s alternate infinite;
+        -ms-transform: rotate(20deg);
+        -o-transform: rotate(20deg);
+        -o-animation: spin 2.0s alternate infinite;
+        -moz-transform: rotate(20deg);
+        -moz-animation: spin 2.0s alternate infinite;
+        -webkit-transform: rotate(20deg);
+        -webkit-animation: spin 2.0s alternate infinite;
+    }
+}
+
+
+@keyframes spin {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1) rotate(70deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(-30deg);
+    }
+}

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Insights.scss';
 import insightsIcon from '../../assets/icons/personalize-white-icon.svg';
 import axios from 'axios';
+import Loading from '../Loading/Loading';
 
 const Insights = () => {
     const [graphData, setGraphData] = useState(null);
@@ -13,7 +14,9 @@ const Insights = () => {
     }, []);
 
     if (!graphData) {
-        return <div>Loading....</div>
+        return <div>
+            <Loading />
+        </div>
     }
 
     const sum = (data, key) => data.reduce((a, b) => a + b[key], 0);

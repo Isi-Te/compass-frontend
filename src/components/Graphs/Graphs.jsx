@@ -3,6 +3,7 @@ import './Graphs.scss';
 import Line from '../LineChart/LineChart';
 import axios from 'axios';
 import LineChart from '../LineChart/LineChart';
+import Loading from '../Loading/Loading';
 
 
 const Graphs = () => {
@@ -18,7 +19,9 @@ const Graphs = () => {
     }, []);
 
     if (!graphData) {
-        return <div>Loading....</div>
+        return <div>
+            <Loading />
+        </div>
     }
 
     console.log(graphData);

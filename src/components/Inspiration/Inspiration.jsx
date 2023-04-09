@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Inspiration.scss';
 import quoteIcon from '../../assets/icons/quote-icon.svg';
 import axios from 'axios';
+import Loading from '../Loading/Loading';
 
 const Inspiration = () => {
 
@@ -21,6 +22,12 @@ const Inspiration = () => {
     }
 
     const randomQuote = getInspiration.length > 0 ? getQuote(getInspiration).quote : '';
+
+    if (!getInspiration) {
+        return <div>
+            <Loading />
+        </div>
+    }
 
     return (
         <section className='inspiration'>

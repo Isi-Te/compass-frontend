@@ -12,10 +12,6 @@ const JournalInfoBox = ({ infoClick, infoClose, infoBox, isSelected }) => {
         return category.title === isSelected;
     })
 
-    console.log(selectedTitle);
-
-
-
     return (
         <section className='info-box'>
             <div className='info-box__headline-container'>
