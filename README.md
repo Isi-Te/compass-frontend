@@ -1,70 +1,145 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Compass
 
-## Available Scripts
+Compass is a self-coaching application designed to empower users in taking charge of their mental health. By tracking and visualizing emotional states, Compass reveals patterns in mental and physical well-being, and provides actionable recommendations for improved self-awareness. The mission is to help people better understand and orient themselves on a personal level by quantifying and visualizing their emotions through journaling. 
 
-In the project directory, you can run:
 
-### `npm start`
+## API Reference
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Get graph-data
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```http
+  GET /api/journal-entry
+```
 
-### `npm test`
+Response body example:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[
+    {
+    "id": "11",
+    "date": "2023-03-30T23:00:01.000Z",
+    "user_id": 1,
+    "happy": 4,
+    "sad": 8,
+    "frustrated": 8,
+    "stress": 8,
+    "sleep": 3,
+    "nutrition": 5,
+    "fitness": 4,
+    "social": 4,
+    "qualitytime": 3,
+    "highlight": "family time",
+    "lowlight": "time pressure"
+    }
+]
 
-### `npm run build`
+#### Post graph-data
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```http
+  POST /api/journal-entry
+```
+Post body example:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[
+    {
+    "happy": 4,
+    "sad": 8,
+    "frustrated": 8,
+    "stress": 8,
+    "sleep": 3,
+    "nutrition": 5,
+    "fitness": 4,
+    "social": 4,
+    "qualitytime": 3,
+    "highlight": "family time",
+    "lowlight": "time pressure"
+    }
+]
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Authors
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- [@Isi-Te](https://github.com/Isi-Te)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Color Reference
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Cyan | ![#006969](https://via.placeholder.com/10/006969?text=+) #006969 |
+| Turquoise | ![#6FBBB1](https://via.placeholder.com/10/6FBBB1?text=+) #6FBBB1 |
+| White | ![#FFFFFF](https://via.placeholder.com/10/FFFFFF?text=+) #FFFFFF |
+| Dark Grey| ![#26262C](https://via.placeholder.com/10/26262C?text=+) #26262C |
+| Ligtht Grey| ![#D1D0D0](https://via.placeholder.com/10/D1D0D0?text=+) #D1D0D0 |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Install my-project with npm
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+  npm install my-project
+  cd my-project
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  npm install axios
+  npm install chart.js
+  npm install dotenv
+  npm install react-chartjs-2
+  npm install react-router-dom
+  npm install sass
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  npm install bcrypt
+  npm install cors
+  npm install dotenv
+  npm install jasonwebtoken
+  npm install knex
+  npm install uuid
+  npm install --save-dev nodemon
+```
+    
+## Roadmap
 
-### Making a Progressive Web App
+- Add more integrations:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+  1. Integrate fitness app API: Automate the upload for fitness, sleep and energy level to simplify the journaling experience.
+  2. Personalized journaling experience: the user can activate and deactivate what they want to track in their journaling experience.
+  3. Image upload: Upload daily highlight in from of a photo and create a memory board.
+  4. Nutrition/macro tracker: Add nutritional facts to better understand the connection between mind and body.
+  5. Pattern recognition and analysis: Utilize AI algorithms to recognize patterns in users' mental and physical well-being and correlate findings to provide comprehensive insights.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Run Locally
 
-### `npm run build` fails to minify
+Clone the project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+  git clone https://link-to-project
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+
+## Tech Stack
+
+**Client:** React, SASS, JavaScript, Chartjs
+
+**Server:** Node, Express, Knex
