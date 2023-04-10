@@ -24,8 +24,6 @@ const Graphs = () => {
         </div>
     }
 
-    console.log(graphData);
-
     let happy = [];
     let sad = [];
     let frustrated = [];
@@ -51,9 +49,8 @@ const Graphs = () => {
     })
 
     //Baseline -- later integration
-    const sum = happy => happy.reduce((a, b) => a + b, 0)
-    const average = (sum(happy) / happy.length);
-    console.log(average);
+    // const sum = happy => happy.reduce((a, b) => a + b, 0)
+    // const average = (sum(happy) / happy.length);
 
     return (
         <>
