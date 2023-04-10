@@ -4,18 +4,20 @@
 Compass is a self-coaching application designed to empower users in taking charge of their mental health. By tracking and visualizing emotional states, Compass reveals patterns in mental and physical well-being, and provides actionable recommendations for improved self-awareness. The mission is to help people better understand and orient themselves on a personal level by quantifying and visualizing their emotions through journaling. 
 
 
-## Run Locally
+## Getting started
 
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone git@github.com:Isi-Te/compass-frontend.git
+  git clone git@github.com:Isi-Te/compass-backend.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd frontend-client
+  cd backend-server
 ```
 
 Install dependencies
@@ -24,29 +26,28 @@ Install dependencies
   npm install
 ```
 
-Start the server
+Start project (client)
 
 ```bash
-  npm run start
+  npm start
+```
+Start project (server)
+```bash
+  npm run dev
 ```
 
 
 ## Installation
 
-Install my-project with npm
+Required npm packages
 
 ```bash
-  npm install my-project
-  cd my-project
-
-
   npm install axios
   npm install chart.js
   npm install dotenv
   npm install react-chartjs-2
   npm install react-router-dom
   npm install sass
-
 
   npm install bcrypt
   npm install cors
@@ -110,6 +111,18 @@ Post body example:
     }
 ]
 
+## Knex.js & MySQL
+`seed_data` is included in this repo to get you started with Knex.js migrations and seeds. To seed your database run the command line `$knex seed:run`.
+
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`PORT` `CORS_ORIGIN` `REACT_APP_SERVER_URL` 
+
+`JWT_SECRET`
+
 
 ## Color Reference
 
@@ -122,26 +135,24 @@ Post body example:
 | Ligtht Grey| ![#D1D0D0](https://via.placeholder.com/10/D1D0D0?text=+) #D1D0D0 |
 
 
-
 ## Roadmap
 
 - Add more integrations:
-
-
   1. Integrate fitness app API: Automate the upload for fitness, sleep and energy level to simplify the journaling experience.
   2. Personalized journaling experience: the user can activate and deactivate what they want to track in their journaling experience.
   3. Image upload: Upload daily highlight in from of a photo and create a memory board.
   4. Nutrition/macro tracker: Add nutritional facts to better understand the connection between mind and body.
   5. Pattern recognition and analysis: Utilize AI algorithms to recognize patterns in users' mental and physical well-being and correlate findings to provide comprehensive insights.
 
+## Built with
 
+**Client:** `React` `SASS` `JavaScript` `Chartjs`
 
-## Tech Stack
-
-**Client:** React, SASS, JavaScript, Chartjs
-
-**Server:** Node, Express, Knex
+**Server:** `Node` `Express` `Knex`
 
 ## Authors
 
 - [@Isi-Te](https://github.com/Isi-Te)
+
+## 🔗 Links
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/iteuber/)
