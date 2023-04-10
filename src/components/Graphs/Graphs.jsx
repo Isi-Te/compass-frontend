@@ -62,7 +62,7 @@ const Graphs = () => {
             <LineChart graphData={graphData} type={nutrition} name='Nutrition' />
             <LineChart graphData={graphData} type={fitness} name='Fitness' />
             <LineChart graphData={graphData} type={social} name='Social' />
-            <LineChart graphData={graphData} type={qualitytime} name='Self-care' />
+            <LineChart graphData={graphData} type={qualitytime} name='Quality Time' />
             <div className='graph__placeholder'></div>
         </>
     );

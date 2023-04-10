@@ -7,13 +7,13 @@ import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Start from './pages/Start';
 import { useState } from 'react';
+import HomepageGraphs from './pages/HomepageGraphs';
 
 function App() {
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(!!sessionStorage.getItem("token"));
 
   console.log(isUserLoggedIn);
-  //API call to get the user
-  //
+
 
   return (
     <div className="App">
@@ -24,7 +24,7 @@ function App() {
           <Route path='/login' element={<Login setIsUserLoggedIn={setIsUserLoggedIn} />}></Route>
           <Route path='/compass' element={<Homepage />}></Route>
           <Route path='/compass/insights' element={<Homepage />}></Route>
-          <Route path='/compass/graphs' element={<Homepage />}></Route>
+          <Route path='/compass/graphs' element={<HomepageGraphs />}></Route>
           <Route path='/journal' element={<JournalingPage />}></Route>
           <Route path='/profile' element={<ProfilePage setIsUserLoggedIn={setIsUserLoggedIn} />}></Route>
         </Routes>

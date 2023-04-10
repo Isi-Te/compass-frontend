@@ -7,7 +7,6 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Login = ({ setIsUserLoggedIn }) => {
     const [error, setError] = useState();
-
     const navigate = useNavigate();
 
     const handleLogin = (event) => {
@@ -30,7 +29,7 @@ const Login = ({ setIsUserLoggedIn }) => {
 
                 console.log(response);
                 sessionStorage.setItem("token", token);
-                navigate('/compass');
+                navigate('/compass/insights');
 
                 setIsUserLoggedIn(true);
             })

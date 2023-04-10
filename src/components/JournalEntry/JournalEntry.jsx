@@ -15,6 +15,7 @@ import socialIcon from '../../assets/icons/social-icon.svg';
 import qualityTimeIcon from '../../assets/icons/quality-time-icon.svg';
 import JournalSlideUp from '../JournalSlideUp/JournalSlideUp';
 import Loading from '../Loading/Loading';
+import { useNavigate } from 'react-router-dom';
 
 const category = ['happy', 'sad', 'frustrated', 'stress', 'sleep', 'nutrition', 'fitness', 'social', 'quality time']
 
@@ -24,6 +25,7 @@ const JournalEntry = () => {
     const [infoBox, setInfoBox] = useState([]);
     const [isSelected, setIsSelected] = useState(null);
     const [value, onChange] = useState(1);
+    const navigate = useNavigate();
 
     const [happy, setHappy] = useState();
     const [sad, setSad] = useState();
@@ -129,6 +131,7 @@ const JournalEntry = () => {
             .then(() => {
                 fetchEntry();
                 event.target.reset();
+                navigate('/compass/insights');
             })
             .catch(err => console.log(err));
     }
