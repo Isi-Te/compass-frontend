@@ -48,6 +48,7 @@ const JournalEntry = () => {
     const handleOnClick = (event) => {
         event.preventDefault();
         setIsSelected(event.target.title);
+        onChange(1);
     }
 
     const handleOnSave = (event) => {

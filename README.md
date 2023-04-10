@@ -4,6 +4,60 @@
 Compass is a self-coaching application designed to empower users in taking charge of their mental health. By tracking and visualizing emotional states, Compass reveals patterns in mental and physical well-being, and provides actionable recommendations for improved self-awareness. The mission is to help people better understand and orient themselves on a personal level by quantifying and visualizing their emotions through journaling. 
 
 
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://link-to-project
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+
+## Installation
+
+Install my-project with npm
+
+```bash
+  npm install my-project
+  cd my-project
+
+
+  npm install axios
+  npm install chart.js
+  npm install dotenv
+  npm install react-chartjs-2
+  npm install react-router-dom
+  npm install sass
+
+
+  npm install bcrypt
+  npm install cors
+  npm install dotenv
+  npm install jasonwebtoken
+  npm install knex
+  npm install uuid
+  npm install --save-dev nodemon
+```
+    
+
 ## API Reference
 
 #### Get graph-data
@@ -57,10 +111,6 @@ Post body example:
 ]
 
 
-## Authors
-
-- [@Isi-Te](https://github.com/Isi-Te)
-
 ## Color Reference
 
 | Color             | Hex                                                                |
@@ -72,32 +122,7 @@ Post body example:
 | Ligtht Grey| ![#D1D0D0](https://via.placeholder.com/10/D1D0D0?text=+) #D1D0D0 |
 
 
-## Installation
 
-Install my-project with npm
-
-```bash
-  npm install my-project
-  cd my-project
-
-
-  npm install axios
-  npm install chart.js
-  npm install dotenv
-  npm install react-chartjs-2
-  npm install react-router-dom
-  npm install sass
-
-
-  npm install bcrypt
-  npm install cors
-  npm install dotenv
-  npm install jasonwebtoken
-  npm install knex
-  npm install uuid
-  npm install --save-dev nodemon
-```
-    
 ## Roadmap
 
 - Add more integrations:
@@ -111,35 +136,12 @@ Install my-project with npm
 
 
 
-## Run Locally
-
-Clone the project
-
-```bash
-  git clone https://link-to-project
-```
-
-Go to the project directory
-
-```bash
-  cd my-project
-```
-
-Install dependencies
-
-```bash
-  npm install
-```
-
-Start the server
-
-```bash
-  npm run start
-```
-
-
 ## Tech Stack
 
 **Client:** React, SASS, JavaScript, Chartjs
 
 **Server:** Node, Express, Knex
+
+## Authors
+
+- [@Isi-Te](https://github.com/Isi-Te)

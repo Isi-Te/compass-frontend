@@ -3,10 +3,12 @@ import React from 'react';
 import { useState } from 'react';
 import axios from 'axios';
 import logoImg from '../assets/logo/compass-logo.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = ({ setIsUserLoggedIn }) => {
     const [error, setError] = useState();
+
+    const navigate = useNavigate();
 
     const handleLogin = (event) => {
         event.preventDefault();
@@ -28,6 +30,7 @@ const Login = ({ setIsUserLoggedIn }) => {
 
                 console.log(response);
                 sessionStorage.setItem("token", token);
+                navigate('/compass');
 
                 setIsUserLoggedIn(true);
             })

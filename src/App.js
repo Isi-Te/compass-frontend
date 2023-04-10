@@ -12,6 +12,8 @@ function App() {
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(!!sessionStorage.getItem("token"));
 
   console.log(isUserLoggedIn);
+  //API call to get the user
+  //
 
   return (
     <div className="App">
