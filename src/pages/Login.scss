@@ -17,7 +17,7 @@
         @include mobile-layout;
         display: flex;
         flex-direction: column;
-        padding: 10rem 0 3rem 0;
+        padding: rem 0 3rem 0;
     }
 
     &__label {
@@ -34,12 +34,12 @@
 
     &__button {
         color: $primary-cyan;
-        opacity: 50%;
         text-transform: uppercase;
         border: none;
         height: 2.5rem;
         border-radius: 0.625rem;
         cursor: pointer;
         margin: 2rem;
+        background-color: $primary-turquoise;
     }
 }

@@ -20,13 +20,13 @@ function App() {
       <BrowserRouter className='browserRouter'>
         <Routes>
           <Route path='/' element={<Start />}></Route>
-          <Route path='/signup' element={<SignUp setIsUserLoggedIn={setIsUserLoggedIn} />}></Route>
+          <Route path='/signup' element={<SignUp />}></Route>
           <Route path='/login' element={<Login setIsUserLoggedIn={setIsUserLoggedIn} />}></Route>
           <Route path='/compass' element={<Homepage />}></Route>
           <Route path='/compass/insights' element={<Homepage />}></Route>
           <Route path='/compass/graphs' element={<Homepage />}></Route>
           <Route path='/journal' element={<JournalingPage />}></Route>
-          <Route path='/profile' element={<ProfilePage />}></Route>
+          <Route path='/profile' element={<ProfilePage setIsUserLoggedIn={setIsUserLoggedIn} />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
