@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const Navigation = () => {
     return (
         <section className='nav'>
-            <Link to='/compass'><img className='nav__icon-compass' src={compassIcon} alt='Compass icon'></img></Link>
+            <Link to='/compass/insights'><img className='nav__icon-compass' src={compassIcon} alt='Compass icon'></img></Link>
             <Link to='/journal'><img className='nav__icon-track' src={plusIcon} alt='Plus Icon'></img></Link>
             <Link to='/profile'><img className='nav__icon-profile' src={profileIcon} alt='Profile Icon'></img></Link>
         </section>

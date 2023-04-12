@@ -79,7 +79,7 @@ const JournalEntry = () => {
         if (isSelected === 'social') {
             setSocial(event.target.value)
         }
-        if (isSelected === 'qualitytime') {
+        if (isSelected === 'quality time') {
             setQualityTime(event.target.value)
         }
 
@@ -210,7 +210,7 @@ const JournalEntry = () => {
                             </div>
                         </div>
                         <div className='journal__activity-container' onClick={(() => setIsOpen(true))}>
-                            <img className='journal__icon journal__icon-self-care' src={qualityTimeIcon} alt='Heart icon' title='qualitytime' onClick={handleOnClick}></img>
+                            <img className='journal__icon journal__icon-self-care' src={qualityTimeIcon} alt='Heart icon' title='quality time' onClick={handleOnClick}></img>
                             <div className='journal__icon-box'>
                                 <h4 className='journal__icon-title'>{category[8]}</h4>
                                 <input className='journal__input' type='number' name='qualitytime' value={qualityTime} required></input>
