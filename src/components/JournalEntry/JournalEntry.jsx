@@ -226,7 +226,7 @@ const JournalEntry = () => {
                     <input className='journal-entry__input journal-entry__input--lowlight' placeholder='What bothered you today?' name='lowlight' minLength='2' maxLength='30' required></input>
                 </div>
                 <div className='journal-entry__button'>
-                    <Link to='/compass'><Button className='journal-entry__button-cancel' name='button__cancel' type='cancel' title='cancel' /></Link>
+                    <Link to='/compass/insights'><Button className='journal-entry__button-cancel' name='button__cancel' type='cancel' title='cancel' /></Link>
                     <Button className='journal-entry__button-track' name='button__track' type='submit' title='track' />
                 </div>
             </form>
