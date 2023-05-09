@@ -6,23 +6,41 @@
     background-color: $primary-cyan;
     height: 115vh;
 
+    @include tablet {
+        height: 130vh;
+    }
+
+
     &__logo {
         display: flex;
         width: 75%;
         margin: 0 auto;
         filter: brightness(0) invert(1);
+
+        @include tablet {
+            margin-top: -5rem;
+        }
     }
 
     &__form {
         @include mobile-layout;
         display: flex;
         flex-direction: column;
-        padding: rem 0 3rem 0;
+        padding: 0 0 3rem 0;
+
+        @include tablet {
+            margin-top: -3rem;
+        }
     }
 
     &__label {
         color: $primary-white;
         margin-top: 0.5rem;
+
+        @include tablet {
+            width: 80%;
+            margin: 0 auto;
+        }
     }
 
     &__input {
@@ -30,6 +48,11 @@
         border: 0.1rem solid $primary-cyan;
         height: 2.5rem;
         opacity: 90%;
+
+        @include tablet {
+            width: 80%;
+            margin: 0 auto;
+        }
     }
 
     &__button {
@@ -41,5 +64,10 @@
         cursor: pointer;
         margin: 2rem;
         background-color: $primary-turquoise;
+
+        @include tablet {
+            width: 80%;
+            margin: 1.5rem auto;
+        }
     }
 }

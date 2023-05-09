@@ -1,3 +1,18 @@
+@use '../../styles/partials/variables' as *;
+
+//Breakpoints
+@mixin tablet {
+    @media screen and (min-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
+        @content;
+    }
+}
+
 //Layout Grid
 @mixin mobile-layout {
     margin: 2rem 1.75rem;
