@@ -52,6 +52,8 @@
     &__ratings-container {
         padding: 1rem 0;
         width: 50%;
+        max-width: 15rem;
+
     }
 
     &__ratings-category {
@@ -63,6 +65,10 @@
 .content {
     margin-bottom: 6rem;
 
+    @include tablet {
+        display: flex;
+    }
+
     &__happiness {
         @include mobile-layout;
         background-color: $primary-turquoise;
@@ -70,6 +76,10 @@
         padding: 1rem;
         width: 90%;
         margin: 1rem auto;
+
+        @include tablet {
+            width: 40%;
+        }
     }
 
     &__stress {
@@ -80,6 +90,10 @@
         padding: 1rem;
         width: 90%;
         margin: 1rem auto;
+
+        @include tablet {
+            width: 40%;
+        }
     }
 
     &__item {
